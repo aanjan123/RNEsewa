@@ -66,6 +66,9 @@ repositories {
         // Android JSC is installed from npm
         url "$rootDir/../node_modules/jsc-android/dist"
     }
+    flatDir{
+        dirs "$rootDir/lib"
+    }
     google()
     jcenter()
 }
@@ -73,6 +76,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    compile files("lib/eSewaSdk.aar")
 }
 
 def configureReactNativePom(def pom) {
