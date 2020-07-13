@@ -1,7 +1,7 @@
 {
   "name": "react-native-esewa",
   "title": "React Native Esewa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React-native wrapper for esewa SDK.",
   "main": "index.js",
   "files": [
@@ -16,8 +16,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-esewa.git",
-    "baseUrl": "https://github.com/github_account/react-native-esewa"
+    "url": "git+https://github.com/aanjan123/RNEsewa.git",
+    "baseUrl": "https://github.com/aanjan123/RNEsewa/"
   },
   "keywords": [
     "react-native",
