@@ -69,7 +69,7 @@ repositories {
   }
 
   flatDir{
-        dirs "$rootDir/lib"
+        dirs "$rootDir/libs"
   }
 
   if (defaultDir.exists()) {
@@ -131,5 +131,5 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation files("lib/eSewaSdk.aar")
+  implementation files("libs/eSewaSdk.aar")
 }
