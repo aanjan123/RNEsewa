@@ -4,7 +4,7 @@
 
 `$ npm install react-native-esewa --save`
 `Or`
-`$ yarn add bcrypt-react-native`
+`$ yarn add react-native-esewa`
 
 ### Mostly automatic installation
 
