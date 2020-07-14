@@ -126,12 +126,18 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+
+  dexOptions {
+    javaMaxHeapSize "4g"
+  }
+
     defaultConfig {
         applicationId "com.example.reactnativeesewa"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -208,6 +214,7 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+    implementation 'com.android.support:design:28.0.0'
 
     implementation project(':reactnativeesewa')
 }

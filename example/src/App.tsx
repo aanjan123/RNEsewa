@@ -1,17 +1,19 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import Esewa from 'react-native-esewa';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    Esewa.multiply(3, 7).then(setResult);
-  }, []);
-
+  const initiate = async () => {
+    Esewa.init('JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R', 'BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==', 'test');
+    await Esewa.makePayment("100", "test", "123", "https://uat-merchant.esewa.com.np");
+    return
+  };
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        title={`Test SDK`}
+        onPress={initiate}
+      />
     </View>
   );
 }
