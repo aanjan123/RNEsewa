@@ -1,6 +1,6 @@
 {
   "name": "react-native-esewa",
-  "version": "0.1.0",
+  "version": "1.0.4",
   "description": "React native wrapper for eSewa SDk.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,9 +32,17 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "esewa",
+    "android",
+    "esewa Sdk",
+    "payment-gateway",
+    "react-native-esewa",
+    "esewa-react-native"
   ],
-  "repository": "https://github.com/aanjan123/react-native-esewa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aanjan123/react-native-esewa.git"
+  },
   "author": "aanjan <aanjanbhuwan@gmail.com> (https://github.com/aanjan123)",
   "license": "MIT",
   "bugs": {
@@ -119,7 +127,10 @@
       ]
     }
   },
-  "eslintIgnore": ["node_modules/", "lib/"],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
@@ -130,6 +141,14 @@
   "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
