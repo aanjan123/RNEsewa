@@ -1,27 +1,30 @@
 # react-native-esewa
 
-React native wrapper for eSewa SDk.
+## Getting started
 
-## Installation
+`$ npm install react-native-esewa --save`
+`Or`
+`$ yarn add bcrypt-react-native`
 
-```sh
-npm install react-native-esewa
-```
+### Mostly automatic installation
+
+`$ react-native link react-native-esewa`
 
 ## Usage
 
-```js
-import Esewa from "react-native-esewa";
+```javascript
+import Esewa from 'react-native-esewa';
 
-// ...
+// INITILIZE
+Esewa.init(MERCHANT_ID,MERCHANT_SECRET_KEY,ENVIRONMENT);
+// Calling helper function to make payment through esewa.
+Esewa.makePayment(amount,productName,productID,callbackURL);
 
-const result = await Esewa.multiply(3, 7);
+// JS implementation
+function onPress(){
+  Esewa.init(MERCHANT_ID,MERCHANT_SECRET_KEY,ENVIRONMENT);
+  Esewa.makePayment(amount,productName,productID,callbackURL);
+}
+
+// TODO: iOS
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
