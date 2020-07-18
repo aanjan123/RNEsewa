@@ -1,3 +1,6 @@
+import Foundation
+import EsewaSDK
+
 @objc(Esewa)
 class Esewa: NSObject, EsewaSDKPaymentDelegate {
     var resolveCallback: RCTPromiseResolveBlock?
@@ -22,7 +25,7 @@ class Esewa: NSObject, EsewaSDKPaymentDelegate {
         self.run(merchantId: merchantId, merchantSecret: merchantSecret, productName: productName, productAmount: productAmount, productId: productId, callbackUrl: callbackUrl)
       }
     }
-    
+
     func run(
       merchantId: String,
       merchantSecret: String,
@@ -36,11 +39,11 @@ class Esewa: NSObject, EsewaSDKPaymentDelegate {
                        environment: .development, delegate: self)
         sdk?.initiatePayment(merchantId: merchantId, merchantSecret: merchantSecret, productName: productName, productAmount: productAmount, productId: productId, callbackUrl: callbackUrl)
     }
-    
+
     func onEsewaSDKPaymentSuccess(info:[String:Any]) {
       resolveCallback!(info)
     }
-    
+
     func onEsewaSDKPaymentError(errorDescription: String) {
       print(errorDescription);
       let error = NSError(domain: "Esewa Error", code: 101)
