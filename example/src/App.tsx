@@ -4,16 +4,23 @@ import Esewa from 'react-native-esewa';
 
 export default function App() {
   const initiate = async () => {
-    Esewa.init('JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R', 'BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==', 'test');
-    await Esewa.makePayment("100", "test", "123", "https://uat-merchant.esewa.com.np");
-    return
+    Esewa.init(
+      'JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R',
+      'BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==',
+      'test'
+    );
+    await Esewa.makePayment(
+      '100',
+      'test',
+      '123',
+      'https://uat-merchant.esewa.com.np'
+    );
+    return;
   };
+
   return (
     <View style={styles.container}>
-      <Button
-        title={`Test SDK`}
-        onPress={initiate}
-      />
+      <Button title={`Test SDK`} onPress={initiate} />
     </View>
   );
 }
