@@ -13,9 +13,10 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/aanjan123/react-native-esewa.git", :tag => "#{s.version}" }
 
-  
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
-  
+
+  s.source_files = "ios/**/*.{h,m,mm,swift}. ios/EsewaSDK.framework/Headers/*.h"
+  s.vendored_frameworks = "EsewaSDK.framework"
+  s.public_header_files = "EsewaSDK.framework/Headers/*.h"
 
   s.dependency "React"
 end
