@@ -1,8 +1,8 @@
-import Foundation
 import EsewaSDK
 
 @objc(Esewa)
-class Esewa: NSObject, EsewaSDKPaymentDelegate {
+class Esewa: NSObject {
+
     var resolveCallback: RCTPromiseResolveBlock?
     var rejectCallback: RCTPromiseRejectBlock?
     var sdk: EsewaSDK?
